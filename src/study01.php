@@ -24,26 +24,26 @@
     1.変数を加算演算子を使って答えを出力しなさい</br>
     <div>
     <?php
-    // ココにコーディング
+    echo 9 + 3;
 
     ?>
     </div>
     2.変数を減算演算子を使って答えを出力しなさい</br>
     <div>
     <?php
-    // ココにコーディング
+    echo 9 - 3;
     ?>
     </div>
     3.変数を乗算演算子を使って答えを出力しなさい</br>
     <div>
     <?php
-    // ココにコーディング
+    echo 9 * 3;
     ?>
     </div>
     4.変数を除算演算子を使って答えを出力しなさい</br>
     <div>
     <?php
-    // ココにコーディング
+    echo 9 / 3; 
     ?>
     </div>
     5.四則演算子を使ってBMI値の計算結果を出力しなさい</br>
@@ -52,7 +52,7 @@
     <a href="https://keisan.casio.jp/exec/system/1161228732" target="_blank">BMIとは</a>
     <div>
     <?php
-    // ココにコーディング
+    echo 70 / (175 * 2);
     ?>
     </div>
     6.四則演算子を使ってBMI値の計算結果とif文でBMI判定を出力しなさい</br>
@@ -62,8 +62,22 @@
     あなたのBMIは〇〇で、"痩せすぎor通常体重or肥満(１度)or肥満(2度)肥満(3度)or肥満(4度)"です。</br>
     <div>
     <?php
-    // ココにコーディング
-    $BMIResult = "BMI値";
+    if($BMIResult < 16){
+      echo "痩せすぎ";
+    }
+      elseif($BMIResult >= 18.5 && $BMIResult <= 24.99){
+       echo "普通体重";
+      }
+        elseif($BMIResult >= 35.00 && $BMIResult <= 39.99){
+         echo "肥満(1度)";
+        }
+       　elseif($BMIResult >= 30.00 && $BMIResult <= 34.99){
+        　echo "肥満(2度)";
+      　　}
+      　　　else($BMIResult >= 40.00){
+       　　　echo "肥満(3度)";
+      　　　}
+    $BMIResult = "0.2";
     $figure = "BMI判定";
     echo "あなたのBMI値は". $BMIResult . "で、" . $figure . "です。";
     ?>
