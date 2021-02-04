@@ -33,18 +33,23 @@ td {
     1.array()を使ってバナナ、リンゴ、レモンの配列を作り出力しなさい。</by>
     <div>
     <?php
+    $fruits = array("バナナ", "リンゴ", "レモン");
+    echo implode('、', $fruits);
     ?>
     </div>
     2."1."で作成した配列に、オレンジを追加しなさい。</br>
     <div>
     <?php
-    // ココにコーディング
+    $fruites = array("バナナ", "リンゴ", "レモン");
+    array_push($fruites, "オレンジ");
+    echo implode('、', $fruites);
     ?>
     </div>
     3."2."で作成した配列の値(value)を好きな料理に全て上書きして出力しなさい。</br>
     <div>
     <?php
-    // ココにコーディング
+     $fruites = array("バナナ", "リンゴ", "レモン", "オレンジ");
+     array_merge()
     ?>
     </div>
     4.array()と以下の表を使って連想配列を作成し出力しなさい。</br>
