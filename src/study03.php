@@ -48,8 +48,8 @@ td {
     3."2."で作成した配列の値(value)を好きな料理に全て上書きして出力しなさい。</br>
     <div>
     <?php
-     $fruites = array("バナナ", "リンゴ", "レモン", "オレンジ");
-     array_merge()
+     $fruites_merge = array("みかん", "メロン", "いちご", "パイナップル");
+     echo implode('、', $fruites_merge);
     ?>
     </div>
     4.array()と以下の表を使って連想配列を作成し出力しなさい。</br>
@@ -74,7 +74,8 @@ td {
     </table>
     <div>
     <?php
-    // ココにコーディング
+    $array = array("pen" => "１００円", "book" => "４００円", "note" => "６００円");
+    print_r($array);
     ?>
     </div>
     5. "4."で作成した連想配列とforeachとif文を使って例文を出力しなさい。</br>
@@ -82,10 +83,14 @@ td {
     あたなが選んだのはnoteで600円です</by>
     <div>
     <?php
-  // ココにコーディング
     $item = "key";
     $value = "value";
-    echo "あなたが選んだのは". $item. "で". $value. "です。";
+    foreach ($array as $key => $value) {
+      $item = $key;
+      if ($key === "note") {
+          echo "あなたが選んだのは". $item. "で". $value. "です。";
+      }
+    }
     ?>
     </div>
   </body>
